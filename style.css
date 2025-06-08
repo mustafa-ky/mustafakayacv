@@ -1,0 +1,247 @@
+/* Genel reset ve temel stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+  }
+  
+  header {
+    width: 100%;
+    background-color: #f9f9f9;
+  }
+
+  .header-inner {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    font-weight: bold;
+  }
+  
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  main h1 {
+    margin: 40px auto 20px;
+    font-size: 24px;
+    max-width: 1250px;
+    padding: 0 20px;
+  }
+  
+  /* Asimetrik galeri düzeni */
+  .gallery {
+    max-width: 1250px;        /* Galeri genişliği */
+    margin: 0 auto;           /* Ortalamak için */
+    column-count: 3;
+    column-gap: 20px;
+    padding: 0 20px;          /* Kenarlardan iç boşluk */
+  }  
+  
+  .gallery img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    break-inside: avoid;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: none; /* isteğe bağlı: açık temada hiç yok */
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  .lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 0px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  footer {
+    margin: 40px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+  }
+  
+  /* Responsive düzen */
+  @media (max-width: 768px) {
+    .gallery {
+      column-count: 1;
+      padding: 0 15px;
+    }
+  }  
+
+  .filters {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .filter-btn {
+    padding: 8px 16px;
+    margin: 15px 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .filter-btn:hover {
+    background-color: #ccc;
+  }
+  
+  .filter-btn.active {
+    background-color: #333;
+    color: white;
+  }
+  /* === Tema Butonu === */
+  .theme-toggle {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    padding: 8px 12px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #eee;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .theme-toggle:hover {
+    background-color: #ccc;
+  }
+  
+  /* === Koyu Tema === */
+  body.dark-mode {
+    background-color: #111;
+    color: #eee;
+  }
+  
+  body.dark-mode .filter-btn {
+    background-color: #444;
+    color: #eee;
+  }
+  
+  body.dark-mode .filter-btn.active {
+    background-color: #eee;
+    color: #111;
+  }
+  
+  body.dark-mode .theme-toggle {
+    background-color: #333;
+    color: #fff;
+  }
+
+  /* Lightbox geçiş okları */
+  .prev, .next {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    user-select: none;
+    transition: 0.3s;
+    z-index: 1001;
+  }
+
+  .prev {
+    left: 20px;
+  }
+
+  .next {
+    right: 20px;
+  }
+
+  .prev:hover, .next:hover {
+    color: #ccc;
+  }
+
+  .lightbox-caption {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  body.dark-mode .lightbox-caption {
+    color: #ccc;
+  }
+
+  body.dark-mode header {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #444;
+  }
+
+  body.dark-mode .logo {
+    color: #fff;
+  }
+
+  body.dark-mode nav a {
+    color: #ccc;
+  }
+
+  body.dark-mode nav a.active {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  body.dark-mode .gallery img {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+
