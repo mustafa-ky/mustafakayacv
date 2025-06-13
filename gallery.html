@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mustafa | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Tema Değiştir">🌙</button>
+      
+  <header>
+    <div class="header-inner">
+      <div class="logo">Mustafa</div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="gallery.html#gallery" class="active">Gallery</a>
+        <a href="#">Blog</a>
+        <a href="about.html">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">Tümü</button>
+        <button class="filter-btn" data-filter="view">Doğa / Manzara</button>
+        <button class="filter-btn" data-filter="architecture">Şehir / Mimari</button>
+        <button class="filter-btn" data-filter="macro">Makro</button>
+    </div>
+      
+    <h1>Work</h1>
+    <div class="gallery">
+      <!-- Galeri görselleri -->
+      <img src="images/photo1.jpg" alt="Photo 1" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo2.jpg" alt="Photo 2" data-category="architecture" data-caption="Bilgi Satırı" />
+      <img src="images/photo3.jpg" alt="Photo 3" data-category="architecture" data-caption="Bilgi Satırı" />
+      <img src="images/photo4.jpg" alt="Photo 4" data-category="macro" data-caption="Bilgi Satırı" />
+      <img src="images/photo5.jpg" alt="Photo 5" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo6.jpg" alt="Photo 6" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo7.jpg" alt="Photo 7" data-category="architecture" data-caption="Bilgi Satırı" />
+      <img src="images/photo8.jpg" alt="Photo 8" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo9.jpg" alt="Photo 9" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo10.jpg" alt="Photo 10" data-category="view" data-caption="Bilgi Satırı" />
+      <!-- <img src="images/photo11.HEIC" alt="Photo 11" data-category="architecture" data-caption="Bilgi Satırı" /> -->
+      <img src="images/photo12.jpg" alt="Photo 12" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo13.jpg" alt="Photo 13" data-category="architecture" data-caption="Bilgi Satırı" />
+      <img src="images/photo14.jpg" alt="Photo 14" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo15.jpg" alt="Photo 15" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo16.jpg" alt="Photo 16" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo17.jpg" alt="Photo 17" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo18.jpg" alt="Photo 18" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo19.jpg" alt="Photo 19" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo20.jpg" alt="Photo 20" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo21.jpg" alt="Photo 21" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo22.jpg" alt="Photo 22" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo23.jpg" alt="Photo 23" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo24.jpg" alt="Photo 24" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo25.jpg" alt="Photo 25" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo26.jpg" alt="Photo 26" data-category="view" data-caption="Bilgi Satırı" />
+      <img src="images/photo27.jpg" alt="Photo 27" data-category="architecture" data-caption="Bilgi Satırı" />
+      <img src="images/photo28.jpg" alt="Photo 28" data-category="architecture" data-caption="Bilgi Satırı" />
+
+
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by Mustafa</p>
+  </footer>
+
+  <!-- Medium Zoom (yakınlaştırma)
+  <script src="https://unpkg.com/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+  -->
+
+  <!-- Hammer.js (mobil swipe) -->
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

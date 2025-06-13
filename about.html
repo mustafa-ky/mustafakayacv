@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mustafa | Hakkımda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Tema Değiştir">🌙</button>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">Mustafa</div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="gallery.html#gallery">Gallery</a>
+        <a href="#">Blog</a>
+        <a href="about.html" class="active">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about">
+    <div class="about-container">
+      <img src="images/infoimg/profile.jpg" alt="Mustafa" class="about-img">
+      <div class="about-text">
+        <h1>Merhaba, ben Mustafa</h1>
+        <p>
+          Görsel hikâye anlatıcılığına tutkuyla bağlıyım. Fotoğrafçılık, tasarım ve dijital sanat alanlarında çalışmalar yapıyorum.
+          Bu portfolyo, benim dünyaya bakışımı yansıtan işlerden oluşuyor.
+        </p>
+        <p>
+          Yakın zamana kadar grafik tasarımı, mesleki açıdan en somut ve elle tutulur kazanımım 
+          olarak gördüğüm için bu alanda iş arıyordum fakat uzun zamandır sektörde yer almadığım için ve 
+          pratik yapmayı da bıraktığım için bu konudaki yetkinliğimi koruyup korumadığım konusunda da şüpheliyim. 
+          Kaldı ki, artık bu işi yapmaktan eskisi gibi keyif almadığımı da fark ettim.
+        </p>
+        <p>
+          Bu nedenle, yetkin olduğum ve bana daha fazla heyecan veren başka alanlara yönelmeye başladım. 
+          Bu alanların hepsini burada sıralamak istemiyorum; ancak şu anda özellikle ilgilendiğim ve üzerine yoğunlaştığım alan gazetecilik.
+        </p>
+        <p>
+          Bu doğrultuda, bir süredir devam ettiğim gazetecilik akademisini Haziran ayında tamamladım ve iş arayışımı bu alana yönlendirdim. 
+          Gazetecilik alanında; muhabirlik, kameramanlık ya da editörlük gibi pozisyonlarda yer almak istiyorum. 
+          Bu görevlerin her biri, hem ilgi alanlarıma hem de sahip olduğum becerilere uygun olduğu için, bu alanda daha etkili olacağıma inanıyorum.
+        </p>
+
+        <section class="cv-previews">
+          <h2>CV'lerim</h2>
+          <div class="cv-list">
+            <div class="cv-item" data-pdf="pdf/cv1genel.pdf">
+              <img src="images/infoimg/cv1genel.jpeg" alt="CV Genel 1">
+              <p>CV Genel (Klasik)</p>
+            </div>
+            <div class="cv-item" data-pdf="pdf/cv2genel.pdf">
+              <img src="images/infoimg/cv2genel.jpeg" alt="CV Genel 2">
+              <p>CV Genel</p>
+            </div>
+            <div class="cv-item" data-pdf="pdf/cv3grafik.pdf">
+              <img src="images/infoimg/cv3grafik.jpeg" alt="CV Grafik">
+              <p>CV Grafik</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sosyal bağlantılar -->
+        <div class="social-links">
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">CV İndir</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="skills">
+    <h2>Yetenekler</h2>
+
+    <div class="skill">
+      <span>HTML / CSS</span>
+    </div>
+
+    <div class="skill">
+      <span>JavaScript</span>
+    </div>
+
+    <div class="skill">
+      <span>Adobe Photoshop</span>
+    </div>
+
+    <div class="skill">
+      <span>Fotoğrafçılık</span>
+    </div>
+  </section>
+
+  <section class="timeline">
+  <h2>Deneyim / Eğitim</h2>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2023 - Günümüz</div>
+    <div class="timeline-content">
+      <h3>Serbest Fotoğrafçı</h3>
+      <p>Yaratıcı projeler, belgesel çekimler ve freelance görsel prodüksiyon çalışmaları.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2020 - 2023</div>
+    <div class="timeline-content">
+      <h3>Grafik Tasarımcı – X Ajansı</h3>
+      <p>Marka kimliği, sosyal medya tasarımları ve dijital kampanyalarda görev aldım.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-year">2016 - 2020</div>
+    <div class="timeline-content">
+      <h3>Görsel İletişim Tasarımı – Y Üniversitesi</h3>
+      <p>Lisans eğitimi boyunca yaratıcı görsel projeler ve dijital sanat üzerine çalıştım.</p>
+    </div>
+  </div>
+  </section>
+
+  </main>
+
+  <footer>
+    <p>© Mustafa – Tüm hakları saklıdır</p>
+  </footer>
+
+  <div id="pdf-lightbox" class="pdf-lightbox">
+    <div class="pdf-content">
+      <button class="pdf-close">×</button>
+      <button class="pdf-download" id="pdf-download">⬇️</button>
+      <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mustafa KAYA | Anasayfa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="homepage">
+  <main class="home-hero">
+    <div class="home-image">
+      <img src="images/infoimg/hero.jpg" alt="Mustafa Kaya">
+    </div>
+    <div class="home-text">
+      <div class="home-text-inner fade-in-up">
+        <h1 class="fade-in-up delay-1"><strong>Mustafa</strong> KAYA</h1>
+        <p class="fade-in-up delay-2">Görsel sanatlar, hikâye anlatımı ve dijital üretim alanlarında çalışan bir üreticinin işleri.</p>
+        <a href="gallery.html" class="home-btn fade-in-up delay-3">Galeri</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+  const albumBtn = document.querySelector('.home-btn');
+  const leftSide = document.querySelector('.home-image');
+  const rightSide = document.querySelector('.home-text');
+
+  if (albumBtn && leftSide && rightSide) {
+    albumBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // yönlendirmeyi durdur
+      leftSide.classList.add('home-exit-left');
+      rightSide.classList.add('home-exit-right');
+
+      // Animasyon tamamlandıktan sonra yönlendir
+      setTimeout(() => {
+        window.location.href = albumBtn.getAttribute('href');
+      }, 1000); // CSS animasyon süresiyle aynı
+    });
+  }
+  </script>
+
+</body>
+</html>
